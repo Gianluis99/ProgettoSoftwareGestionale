@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="286.0" style="-fx-background-radius: 210;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.prodotti.ProdottoItemController">
+   <children>
+      <VBox prefHeight="309.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="35.0" prefWidth="216.0" style="-fx-background-color: #d3fda7;">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="51.0" style="-fx-background-color: #57c574;" text="Nome:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nomeLabel" prefHeight="48.0" prefWidth="140.0" style="-fx-background-color: #57c574;" text="Lavagna">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="52.0" prefWidth="53.0" style="-fx-background-color: #57c574;" text="Prezzo:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="prezzoLabel" prefHeight="26.0" prefWidth="42.0" style="-fx-background-color: #57c574;" text="12">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="124.0" style="-fx-background-color: #57c574;">
+               <children>
+                  <ImageView fx:id="imageV" fitHeight="133.0" fitWidth="198.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #57c574;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="331.0" style="-fx-background-color: #d3fda7;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="56.0" style="-fx-background-color: #57c574;" text="Qnt:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numDispLabel" prefHeight="27.0" prefWidth="110.0" style="-fx-background-color: #57c574;" text="12">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="27.0" prefWidth="84.0" style="-fx-background-color: #57c574;" text="Categoria:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="categoriaLabel" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #57c574;" text="Giochi">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="331.0" style="-fx-background-color: #d3fda7;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: #57c574;" text="Fornitore:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nomeFornitoreLabel" prefHeight="27.0" prefWidth="56.0" style="-fx-background-color: #57c574;" text="Giovanni">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cognomeFornitoreLabel" prefHeight="27.0" prefWidth="167.0" style="-fx-background-color: #57c574;" text="Marino">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="331.0" style="-fx-background-color: #d3fda7;">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="75.0" style="-fx-background-color: #57c574;" text="Codice:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="codiceLabel" prefHeight="35.0" prefWidth="211.0" style="-fx-background-color: #57c574;" text="1234231234213213123">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="286.0" style="-fx-background-color: #57c574;">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="72.0" style="-fx-background-color: #57c574;" text="Data Carico:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dataLabel" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #57c574;" text="10/20/2020">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

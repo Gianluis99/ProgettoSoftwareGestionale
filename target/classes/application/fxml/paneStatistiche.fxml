@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right top, #aeae20, #a5c100, #92d500, #70ea00, #00ff0b);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.utility.StatisticheController">
+   <children>
+      <BorderPane layoutX="17.0" layoutY="53.0" prefHeight="330.0" prefWidth="571.0" style="-fx-background-color: linear-gradient(to right top, #aeae20, #a5c100, #92d500, #70ea00, #00ff0b);" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="53.0">
+         <top>
+            <GridPane alignment="CENTER" hgap="30.0" prefHeight="99.0" prefWidth="720.0" vgap="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="277.0" prefWidth="228.0" style="-fx-background-color: linear-gradient(to right top, #aeae20, #a5c100, #92d500, #70ea00, #00ff0b); -fx-background-radius: 1em;">
+                     <children>
+                        <Label fx:id="prodottiLabel" layoutX="8.0" layoutY="14.0" prefHeight="38.0" prefWidth="54.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="6.0" layoutY="51.0" prefHeight="46.0" prefWidth="158.0" text="totale prodotti" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="172.0" layoutY="34.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/productIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #aeae20, #a5c100, #92d500, #70ea00, #00ff0b); -fx-background-radius: 1em;" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="clientiLabel" layoutX="8.0" layoutY="14.0" prefHeight="38.0" prefWidth="54.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="6.0" layoutY="51.0" prefHeight="46.0" prefWidth="158.0" text="totale clienti" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="54.0" fitWidth="46.0" layoutX="153.0" layoutY="28.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/clientIcon2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="106.0" prefWidth="216.0" style="-fx-background-color: linear-gradient(to right top, #aeae20, #a5c100, #92d500, #70ea00, #00ff0b); -fx-background-radius: 1em;" GridPane.columnIndex="2">
+                     <children>
+                        <Label fx:id="fornitoriLabel" layoutX="8.0" layoutY="14.0" prefHeight="38.0" prefWidth="54.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="6.0" layoutY="51.0" prefHeight="46.0" prefWidth="158.0" text="totale fornitori" textFill="WHITE">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="170.0" layoutY="34.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/supplierIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="232.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="212.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="216.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </top>
+      </BorderPane>
+      <Button id="returnButton" fx:id="returnButton" mnemonicParsing="false" onAction="#returnToHome" prefHeight="39.0" prefWidth="49.0" />
+      <Label alignment="CENTER" layoutX="49.0" prefHeight="39.0" prefWidth="551.0" text="Statistiche       " textFill="WHITE" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

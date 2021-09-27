@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.HomeController">
+   <children>
+      <BorderPane fx:id="borderp" layoutX="77.0" layoutY="32.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="57.0" prefWidth="700.0" style="-fx-background-color: #262630;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="menuSecond" fx:id="Menu" alignment="CENTER_RIGHT" layoutY="11.0" mnemonicParsing="false" onAction="#menuFirst" prefHeight="39.0" prefWidth="85.0" text="MENU" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button id="menuFirst" fx:id="MenuReturn" alignment="CENTER_RIGHT" layoutY="12.0" mnemonicParsing="false" onAction="#menuClose" prefHeight="40.0" prefWidth="85.0" style="-fx-graphic: url(&quot;/application/icon/closeMenuWhite.png&quot;);" text="MENU" textAlignment="RIGHT" textFill="WHITE" />
+                  <Pane layoutX="656.0" layoutY="-1.0" prefHeight="63.0" prefWidth="210.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                     <children>
+                        <MenuButton id="menuVerticalButton" fx:id="menuVertical" layoutX="180.0" layoutY="13.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="32.0">
+                          <items>
+                            <MenuItem fx:id="LogOut" mnemonicParsing="false" onAction="#ReturnToLog" text="Log Out" />
+                            <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#exitFromApp" text="Exit" />
+                          </items>
+                        </MenuButton>
+                        <Button id="helpButton" fx:id="helpChatButton" layoutX="117.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToHelpChat" prefHeight="41.0" prefWidth="54.0" style="-fx-background-radius: 30; -fx-border-radius: 30;">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="Mandaci un messaggio!" />
+                           </tooltip>
+                        </Button>
+                        <Button id="profileButton" fx:id="profileButton" alignment="BOTTOM_CENTER" layoutX="41.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToProfileSettings" prefHeight="43.0" prefWidth="64.0" style="-fx-background-radius: 1em;" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Button id="returnButtonHome" fx:id="returnButtonHome" layoutX="103.0" layoutY="13.0" mnemonicParsing="false" onAction="#returnBack" prefHeight="39.0" prefWidth="60.0">
+                     <tooltip>
+                        <Tooltip text="Torna Indietro" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane fx:id="centralPane" prefHeight="443.0" prefWidth="508.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <AnchorPane fx:id="vbar" prefHeight="445.0" prefWidth="198.0" style="-fx-background-color: #2c2b3b;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="47.0" layoutY="50.0" prefHeight="253.0" prefWidth="199.0" AnchorPane.bottomAnchor="142.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <Separator opacity="0.57" prefHeight="4.0" prefWidth="193.0" style="-fx-background-color: #232423;" />
+                        <Button id="homeButton" fx:id="homeButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#returnToHome" prefHeight="35.0" prefWidth="228.0" styleClass="menuVBarButton" text="Home" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="prodottiButton" fx:id="prodottiButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#goToAddProdotti" prefHeight="35.0" prefWidth="258.0" styleClass="menuVBarButton" text="   Prodotti" textAlignment="CENTER" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="clientiButton" fx:id="clientiButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#goToClienti" prefHeight="36.0" prefWidth="285.0" styleClass="menuVBarButton" text="Clienti" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="fornitoriButton" fx:id="fornitoriButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#goToFornitori" prefHeight="36.0" prefWidth="257.0" styleClass="menuVBarButton" text="    Fornitori" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="magazzinoButton" fx:id="magazzinoButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#goToMagazzino" prefHeight="36.0" prefWidth="261.0" styleClass="menuVBarButton" text="       Magazzino" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="organizzazioneButton" fx:id="organizzazioneButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#goToUtility" prefHeight="36.0" prefWidth="255.0" styleClass="menuVBarButton" text="            Utilità             " textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button id="territoriButton" fx:id="territoriButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#goToTerritori" prefHeight="36.0" prefWidth="230.0" styleClass="menuVBarButton" text="  Territori" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" layoutX="-1.0" layoutY="304.0" prefHeight="109.0" prefWidth="203.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="304.0">
+                     <children>
+                        <Separator opacity="0.57" prefHeight="4.0" prefWidth="193.0" style="-fx-background-color: #232423;" />
+                        <Button id="impostazioniButton" fx:id="impostazioniButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#goToImpostazioni" prefHeight="34.0" prefWidth="214.0" styleClass="menuVBarButton" text="           Impostazioni" textFill="#fcfcfc">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Separator opacity="0.57" prefHeight="4.0" prefWidth="193.0" style="-fx-background-color: #232423;" />
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="53.0" fitWidth="192.0" layoutX="16.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="388.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label alignment="CENTER" layoutX="-3.0" layoutY="2.0" prefHeight="50.0" prefWidth="156.0" text="ManageSoft-©" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Tw Cen MT" size="29.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.4833333333333334" centerY="0.4761904761904762" radius="0.5">
+                           <stops>
+                              <Stop color="#1e8000" />
+                              <Stop color="#94f278" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+                  <Hyperlink fx:id="CopyRight" alignment="CENTER" layoutX="14.0" layoutY="417.0" onAction="#goToPrivacy" prefHeight="28.0" prefWidth="192.0" text="Funzionalità e CopyRight-©" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

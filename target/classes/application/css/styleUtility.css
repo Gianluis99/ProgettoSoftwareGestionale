@@ -1,0 +1,55 @@
+
+.button{
+	-fx-background-color:#92d500;
+}
+
+.button:hover{
+	-fx-background-color:#597C09;
+}
+
+#textAllMessagClient{
+	-fx-control-inner-background:rgb(221, 221, 221);
+	-fx-text-fill: rgb(0, 0, 0);
+	-fx-border-color:rgb(221, 221, 221);
+	
+}
+
+#chatClientEditableText{
+	-fx-control-inner-background:rgb(255, 255, 255);
+	-fx-text-fill: rgb(0, 0, 0);
+	-fx-border-color:rgb(255, 255, 255);
+
+}
+
+.text-area {
+-fx-focus-color: transparent;
+-fx-border-style: none;
+
+}
+
+#chatClientEditable:focused .content {
+    -fx-background-color:  transparent;
+}
+
+
+
+#hboxChatClient{
+		-fx-background-color: rgb(178, 178, 178);
+		-fx-border-color:transparent;
+
+}
+
+
+.scroll-bar:horizontal, .scroll-bar:horizontal{
+    -fx-background-color:transparent;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color: linear-gradient(to right top, #e7b1d0, #dcafd6, #ceaedb, #bdaddf, #abade1, #a0b4e6, #95bae8, #8cc0e8, #90cdeb, #9adaec, #a9e5ec, #bcf0ed);
+}
+
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #92d500;
+    -fx-background-radius: 5em;
+}

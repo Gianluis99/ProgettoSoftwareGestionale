@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SettingsController">
+   <children>
+      <VBox layoutX="94.0" layoutY="225.0" prefHeight="289.0" prefWidth="712.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="127.0" text="Audio" textFill="#686565">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="83.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="32.0" layoutY="31.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-radius: 1em; -fx-background-color: gray;">
+                           <children>
+                              <Button id="buttonOn" fx:id="buttonOn" layoutX="-18.0" mnemonicParsing="false" onAction="#onToOff" prefHeight="26.0" prefWidth="37.0" style="-fx-background-radius: 1em;" text="ON">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button id="buttonOff" fx:id="buttonOff" layoutX="50.0" mnemonicParsing="false" onAction="#offToOn" prefHeight="14.0" prefWidth="37.0" style="-fx-background-radius: 1em;" text="OFF">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="712.0" style="-fx-background-color: white;">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="133.0" text="Volume audio" textFill="#686565">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="44.0" prefWidth="16.0" textFill="#686565">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Slider id="audioSlider" fx:id="audioSlider" prefHeight="0.0" prefWidth="151.0" />
+                  <Pane prefHeight="42.0" prefWidth="45.0" HBox.hgrow="NEVER">
+                     <children>
+                        <ImageView fx:id="audioImageMeta" fitHeight="34.0" fitWidth="36.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="audioImageMax" fitHeight="25.0" fitWidth="34.0" layoutX="10.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/maxAudioIcon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="audioImageMute" fitHeight="25.0" fitWidth="34.0" layoutX="10.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/muteAudioIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="91.0" prefWidth="611.0">
+               <children>
+                  <Button id="settingsButton" fx:id="settingsButtonSave" mnemonicParsing="false" onAction="#saveAll" prefHeight="38.0" prefWidth="92.0" text="Salva" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="94.0" layoutY="45.0" prefHeight="110.0" prefWidth="720.0" style="-fx-background-color: white; -fx-background-radius: 1em;" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <ImageView id="imageSettings" fitHeight="38.0" fitWidth="31.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/settingsIcon.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="76.0" prefWidth="230.0" text="IMPOSTAZIONI" textFill="#807d7d">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+   </children>
+</AnchorPane>

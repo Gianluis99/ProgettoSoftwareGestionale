@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="497.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LoginController">
+   <children>
+      <AnchorPane layoutX="313.0" layoutY="27.0" prefHeight="443.0" prefWidth="289.0">
+         <children>
+            <Line endX="100.0" layoutX="159.0" layoutY="258.0" startX="-100.0" />
+            <Line endX="100.0" layoutX="159.0" layoutY="199.0" startX="-100.0" />
+            <Label layoutX="56.0" layoutY="7.0" prefHeight="69.0" prefWidth="102.0" text="Sign In">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <TextField id="loginEmail" fx:id="textSignEmail" alignment="BOTTOM_LEFT" layoutX="53.0" layoutY="167.0" onMouseEntered="#emailTextAction" onMouseExited="#hideEmailText" prefHeight="32.0" prefWidth="207.0" promptText="Inserisci la tua Email" />
+            <Button id="ButtonLogin" fx:id="SignInButton" layoutX="105.0" layoutY="339.0" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="102.0" text="Sign In" />
+            <PasswordField id="loginPassword" fx:id="textSignPassword" alignment="BOTTOM_LEFT" layoutX="53.0" layoutY="226.0" onMouseEntered="#passwordTextShow" onMouseExited="#hidePasswordText" prefHeight="32.0" prefWidth="207.0" promptText="Inserisci la tua Password" />
+            <Hyperlink layoutX="75.0" layoutY="418.0" onAction="#register" prefHeight="23.0" prefWidth="170.0" text="Non sei registrato? Registrati" />
+            <TextField id="textLogin" fx:id="textWarnings" editable="false" layoutX="75.0" layoutY="387.0" prefHeight="25.0" prefWidth="213.0" />
+            <Separator layoutX="58.0" layoutY="377.0" prefWidth="200.0" />
+            <Label fx:id="emailLabel" layoutX="61.0" layoutY="150.0" prefHeight="17.0" prefWidth="108.0" text="Inserisci la tua Email" textFill="#92d500" />
+            <Label fx:id="passwordLabel" layoutX="61.0" layoutY="209.0" prefHeight="17.0" prefWidth="133.0" text="Inserisci la tua Password" textFill="#92d500" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="loginPane" layoutX="-12.0" layoutY="-12.0" prefHeight="526.0" prefWidth="341.0">
+         <children>
+            <ImageView fitHeight="137.0" fitWidth="181.0" layoutX="88.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LogoWhite.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

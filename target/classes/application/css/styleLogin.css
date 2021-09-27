@@ -1,0 +1,117 @@
+
+#ButtonLogin{
+	-fx-background-color:  #92d500;
+}
+
+#ButtonLogin:hover{
+	-fx-background-color: #597C09;
+}
+
+
+#registerPane{
+-fx-background-color: linear-gradient(to right top, #f5f9ff, #d7f9ff, #b7fbf7, #b4f9d0, #d6ee9e);
+}
+
+#emailRegister{
+	-fx-background-color:transparent;
+
+}
+
+ 
+#emailRegister:hover{
+	-fx-border-color:#77F454;
+	-fx-border-width: 4px;
+
+
+}
+
+#RegisterPassword{
+			-fx-background-color:transparent;
+
+}
+
+ 
+#RegisterPassword:hover{
+	-fx-border-color:#77F454;
+	-fx-border-width: 4px;
+
+
+}
+
+#loginEmail{
+	-fx-background-color:transparent;
+
+}
+
+#loginEmail:hover{
+	-fx-border-color:#70ea00;
+	-fx-border-width: 4px;
+
+
+}
+
+#loginPassword{
+	-fx-background-color:transparent;
+
+}
+ 
+#loginPassword:hover{
+	
+	-fx-border-color:#70ea00;
+	-fx-border-width: 4px;
+
+
+}
+
+#textLogin{
+		-fx-background-color:transparent;
+		-fx-text-inner-color: red;
+
+}
+
+#loginPane{
+	-fx-background-color: linear-gradient(to right top, #aeae20, #a5c100, #92d500, #70ea00, #00ff0b);
+	-fx-background-radius:1em;
+}
+
+#TextAlertRegister{
+		-fx-background-color:transparent;
+		-fx-text-inner-color: red;
+
+}
+
+#buttonRegister{
+		-fx-background-color:  #92d500;
+
+}
+
+#buttonRegister:hover{
+	-fx-background-color: #597C09;
+}
+
+#buttonTopRregister{
+			-fx-background-color:  transparent;
+		    -fx-background-image: url("/application/icon/return.png");
+			-fx-background-size: 35 40;
+			
+
+}
+
+#buttonTopRregister:hover{
+		-fx-background-color: #b9f9d0;
+
+}
+
+#buttonTopRregister:pressed{
+		-fx-background-color:  #b2f4f8;
+}
+
+
+.styleErrortext{
+	-fx-background-color: rgb(255, 89, 89);
+	-fx-border-color:rgb(255, 0, 0);
+	-fx-border-width: 4px;
+}
+
+
+

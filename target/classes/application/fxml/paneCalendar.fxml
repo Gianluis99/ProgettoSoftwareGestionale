@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right top, #aeae20, #a5c100, #92d500, #70ea00, #00ff0b);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.utility.CalendarController">
+   <children>
+      <Label alignment="CENTER" layoutX="50.0" layoutY="-1.0" prefHeight="41.0" prefWidth="850.0" style="-fx-background-color: transparent;" text="Calendario" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="517.0" layoutY="60.0" prefHeight="577.0" prefWidth="352.0" style="-fx-background-color: #7aff00;" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="66.0">
+         <children>
+            <Label alignment="TOP_CENTER" prefHeight="45.0" prefWidth="375.0" text="Registra  evento!">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="63.0" prefWidth="28.0" />
+            <HBox alignment="CENTER" prefHeight="67.0" prefWidth="484.0">
+               <children>
+                  <Label prefHeight="67.0" prefWidth="102.0" text="Titolo:  ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="inserisciTitoloText" prefHeight="25.0" prefWidth="210.0" promptText="Inserisci il titolo dell'evento" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="67.0" prefWidth="484.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="67.0" prefWidth="104.0" text="Descrizione:    ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="inserisciDescrizioneText" prefHeight="67.0" prefWidth="210.0" promptText="inserisci una descrizione" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="67.0" prefWidth="484.0">
+               <children>
+                  <Label prefHeight="67.0" prefWidth="102.0" text="Luogo:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="inserisciLuogoText" prefHeight="25.0" prefWidth="210.0" promptText="Inserisci il luogo dell'evento" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="67.0" prefWidth="484.0">
+               <children>
+                  <Label prefHeight="67.0" prefWidth="102.0" text="Data:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="InserisciDatePicker" prefHeight="25.0" prefWidth="211.0" />
+               </children>
+            </HBox>
+            <Label prefHeight="99.0" prefWidth="28.0" />
+            <Button id="buttonGreen2" fx:id="creaEventButton" mnemonicParsing="false" onAction="#addEvent" prefHeight="33.0" prefWidth="88.0" text="Salva evento">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </VBox>
+      <Button id="returnButtonCalendar" fx:id="returnButton" mnemonicParsing="false" onAction="#returnToHome" prefHeight="41.0" prefWidth="57.0" />
+      <ScrollPane fx:id="scrollPane" layoutX="29.0" layoutY="66.0" prefHeight="577.0" prefWidth="487.0" style="-fx-background-color: transparent; -fx-background-radius: 1em;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="66.0">
+         <content>
+            <GridPane fx:id="gridPane" alignment="TOP_CENTER" hgap="20.0" prefHeight="549.0" prefWidth="501.0" style="-fx-background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); -fx-border-radius: 1em;" vgap="20.0">
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+               <children>
+                  <Label alignment="TOP_CENTER" prefHeight="27.0" prefWidth="505.0" text="Eventi Registrati">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

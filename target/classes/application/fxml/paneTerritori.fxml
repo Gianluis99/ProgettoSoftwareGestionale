@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.TerritoriController">
+   <children>
+      <HBox alignment="CENTER" layoutX="94.0" layoutY="138.0" prefHeight="62.0" prefWidth="712.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="138.0">
+         <children>
+            <Button id="buttonTerritorio" fx:id="aggiungiTerritorioButton" mnemonicParsing="false" onAction="#aggiungiTerritorio" prefHeight="37.0" prefWidth="137.0" styleClass="buttonTerritorio" text="Aggiungi Territorio">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label prefHeight="17.0" prefWidth="5.0" />
+            <Button id="buttonTerritorio" fx:id="modificaTerritorioButton" mnemonicParsing="false" onAction="#modificaTerritorio" prefHeight="37.0" prefWidth="137.0" styleClass="buttonTerritorio" text="Modifica Territorio">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label prefHeight="17.0" prefWidth="5.0" />
+            <Button id="buttonTerritorio" fx:id="assegnaTerritorioButton" mnemonicParsing="false" onAction="#assegnaTerritorio" prefHeight="35.0" prefWidth="137.0" styleClass="buttonTerritorio" text="Assegna Territorio">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label prefHeight="17.0" prefWidth="5.0" />
+            <Button id="buttonTerritorio" fx:id="consegnaTerritorioButton" mnemonicParsing="false" onAction="#consegnaTerritorio" prefHeight="37.0" prefWidth="137.0" styleClass="buttonTerritorio" text="Consegna Territorio">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label prefHeight="17.0" prefWidth="5.0" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="94.0" layoutY="45.0" prefHeight="110.0" prefWidth="720.0" style="-fx-background-color: white; -fx-background-radius: 1em;" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="79.0" prefWidth="505.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="117.0" prefWidth="501.0" text="Organizza la tua campagna pubblicitaria!" textFill="#807d7d">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="0.0" prefWidth="712.0" />
+               </children>
+            </VBox>
+            <ImageView fitHeight="79.0" fitWidth="97.0" opacity="0.61" pickOnBounds="true" preserveRatio="true" style="-fx-scale-x: 0.5; -fx-scale-y: 0.5;">
+               <image>
+                  <Image url="@../icon/territoriIcon.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <HBox fx:id="boxAggiungiTerritiorio" alignment="TOP_CENTER" layoutX="94.0" layoutY="193.0" prefHeight="250.0" prefWidth="712.0" style="-fx-background-color: white; -fx-background-radius: 1em;" visible="false" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="712.0">
+               <children>
+                  <Label fx:id="labelTerritorio" alignment="CENTER" prefHeight="21.0" prefWidth="733.0" text="Aggiungi un territorio:">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="77.0" prefWidth="712.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="56.0" text="Nome:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inserisciNomeText" prefHeight="25.0" prefWidth="146.0" promptText="inserisci il nome" />
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="85.0" text="Numero:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inserisciNumeroText" prefHeight="25.0" prefWidth="146.0" promptText="inserisci il numero" />
+                        <Label alignment="CENTER" prefHeight="55.0" prefWidth="61.0" text="Note:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="inserisciNotaText" prefHeight="43.0" prefWidth="200.0" promptText="inserisci una nota" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="72.0" prefWidth="712.0" />
+                  <Label prefHeight="48.0" prefWidth="28.0" />
+                  <HBox alignment="CENTER" prefHeight="92.0" prefWidth="712.0">
+                     <children>
+                        <Button id="buttonTerritorio" fx:id="aggiungiEndButton1" mnemonicParsing="false" onAction="#aggiungiEnd" prefHeight="37.0" prefWidth="65.0" styleClass="buttonTerritorio" text="Salva" />
+                        <Label prefHeight="17.0" prefWidth="52.0" />
+                        <Button id="buttonTerritorio" fx:id="annullaEndButton" mnemonicParsing="false" onAction="#annullaEnd" prefHeight="37.0" prefWidth="65.0" styleClass="buttonTerritorio" text="Annulla" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <TableView fx:id="tableTerritori" layoutY="192.0" prefHeight="460.0" prefWidth="900.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="192.0">
+        <columns>
+          <TableColumn fx:id="numTerritorioCol" prefWidth="290.0" text="Num Territorio" />
+          <TableColumn fx:id="nomeTerritorioCol" prefWidth="170.0" text="Nome  Territorio" />
+            <TableColumn fx:id="notaTerritorioCol" minWidth="0.0" prefWidth="165.0" text="Nota" />
+            <TableColumn fx:id="assegnatoTerritorioCol" prefWidth="96.0" text="Condizione" />
+        </columns>
+      </TableView>
+      <HBox fx:id="assegnaBox" alignment="CENTER" layoutX="94.0" layoutY="193.0" prefHeight="250.0" prefWidth="689.0" style="-fx-background-radius: 1em; -fx-background-color: white;" visible="false" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="117.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="202.0" prefWidth="690.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="37.0" prefWidth="690.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="171.0" text="Territorio Numero:">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="assegnaNumeroLabel" alignment="CENTER" prefHeight="35.0" prefWidth="38.0" text="12">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="66.0" prefWidth="690.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="47.0" text="Nome:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomeAssegnaText" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="119.0" text="Cognome:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cognomeAssegnaText" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="66.0" prefWidth="690.0">
+                     <children>
+                        <Label fx:id="labelDateAssegna" prefHeight="30.0" prefWidth="132.0" text="Data assegnamento:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dateAssegna" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="690.0" spacing="30.0">
+                     <children>
+                        <Button id="buttonTerritorio" fx:id="salvaConsegnaButtonEnd" mnemonicParsing="false" onAction="#aggiungiConsegnaEnd" prefHeight="37.0" prefWidth="65.0" styleClass="buttonTerritorio" text="Salva" />
+                        <Button id="buttonTerritorio" fx:id="annullaConsegnaButtonEnd" mnemonicParsing="false" onAction="#annullaConsegnaEnd" prefHeight="37.0" prefWidth="65.0" styleClass="buttonTerritorio" text="Annulla" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+   </children>
+</AnchorPane>

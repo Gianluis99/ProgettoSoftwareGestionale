@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ClientiController">
+   <children>
+      <TableView fx:id="clienteTable" layoutY="39.0" prefHeight="611.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+         <columns>
+            <TableColumn fx:id="nomeCliente" minWidth="7.0" prefWidth="160.0" text="Nome" />
+            <TableColumn fx:id="cognomeCliente" prefWidth="160.0" text="Cognome" />
+            <TableColumn fx:id="cittaCliente" prefWidth="158.0" text="Città" />
+            <TableColumn fx:id="telefonoCliente" prefWidth="162.0" text="Telefono" />
+         </columns>
+      </TableView>
+      <HBox prefHeight="33.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="aggiungiClientiButton" fx:id="aggiungiClienteButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#aggiungiCliente" prefHeight="42.0" prefWidth="115.0" text="Aggiungi">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button id="modificaClientiButton" fx:id="modificaClienteButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#modificaCliente" prefHeight="42.0" prefWidth="115.0" text="Modifica">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button id="eliminaClientiButton" fx:id="eliminaClienteButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#eliminaCliente" prefHeight="42.0" prefWidth="115.0" text="Elimina">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button id="scaricaClientiButton" fx:id="scaricaPdfClientiButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#scaricaPdfClienti" prefHeight="42.0" prefWidth="115.0" text="Scarica pdf Clienti">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
+            <TextField fx:id="ricercaClienteText" prefHeight="42.0" prefWidth="351.0" promptText="Ricerca il cliente per nome e cognome..." />
+            <Button id="ricercaClientiButton" fx:id="ricercaClienteButton" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#ricercaCliente" prefHeight="42.0" prefWidth="115.0" text="Ricerca">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="AnchorPaneBox" layoutX="200.0" layoutY="92.0" prefHeight="285.0" prefWidth="444.0" style="-fx-background-color: white;" visible="false" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="8.0" layoutY="44.0" prefHeight="153.0" prefWidth="531.0" spacing="7.0" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="44.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="115.0" text="   Nome:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="insertNomeCliente" prefHeight="25.0" prefWidth="327.0" promptText="Inserisci il nome" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="115.0" text="         Cognome:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="insertCognomeCliente" prefHeight="22.0" prefWidth="328.0" promptText="Inserisci il cognome" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="115.0" text=" Città:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="insertCittaCliente" prefHeight="24.0" prefWidth="328.0" promptText="Inserisci la città" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="115.0" text="        Telefono:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="insertTelefonoCliente" prefHeight="26.0" prefWidth="328.0" promptText="Inserisci telefono" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutY="238.0" prefHeight="46.0" prefWidth="516.0" spacing="50.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button id="buttonGreen" fx:id="salvaNewClienteButton" mnemonicParsing="false" onAction="#salvaCliente" prefHeight="38.0" prefWidth="90.0" text="Salva" />
+                  <Button id="buttonGreen" fx:id="annullaClienteButton" mnemonicParsing="false" onAction="#annullaClienteEnd" prefHeight="37.0" prefWidth="90.0" text="Annulla" />
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

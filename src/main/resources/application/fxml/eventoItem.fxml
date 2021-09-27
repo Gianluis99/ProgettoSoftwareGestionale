@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="199.0" prefWidth="516.0" style="-fx-background-color: #014f56;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.utility.CalendarEventController">
+   <children>
+      <HBox alignment="CENTER" layoutX="2.0" layoutY="31.0" prefHeight="169.0" prefWidth="514.0" style="-fx-background-color: #063236;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <VBox prefHeight="159.0" prefWidth="193.0" style="-fx-border-color: #02181a;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="169.0" text="Luogo:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="luogoText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="wqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq" textAlignment="CENTER" wrappingWidth="181.13671875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </VBox>
+            <VBox prefHeight="167.0" prefWidth="160.0" style="-fx-border-color: #02181a;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="195.0" text="Data:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dataText" alignment="CENTER" prefHeight="20.0" prefWidth="188.0" text="20/20/1999" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </VBox>
+            <VBox prefHeight="159.0" prefWidth="174.0" style="-fx-border-color: #02181a;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="195.0" text="Descrizione:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="descrizioneText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="qwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww" textAlignment="CENTER" wrappingWidth="180.13671875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="titoloLabel" alignment="CENTER" layoutX="15.0" layoutY="4.0" prefHeight="36.0" prefWidth="496.0" style="-fx-background-color: #014f56;" text="La saòita sulla" textFill="#141111" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Cooper Black" size="26.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

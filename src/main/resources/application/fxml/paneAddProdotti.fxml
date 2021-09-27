@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.prodotti.ProdottoController">
+   <children>
+      <HBox alignment="TOP_CENTER" layoutX="90.0" layoutY="28.0" prefHeight="110.0" prefWidth="720.0" style="-fx-background-color: white; -fx-background-radius: 1em;" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="28.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="91.0" prefWidth="448.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="91.0" prefWidth="377.0" text="Inserisci un nuovo prodotto!" textFill="#807d7d">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutX="64.0" layoutY="227.0" prefHeight="405.0" prefWidth="772.0" style="-fx-background-color: white; -fx-border-radius: 1em;" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="227.0">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="201.0" prefWidth="772.0" style="-fx-background-radius: 1em;">
+               <children>
+                  <VBox alignment="TOP_RIGHT" prefHeight="226.0" prefWidth="260.0">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="154.0" text="Codice prodotto:" textFill="#837e7e">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="153.0" text="Nome prodotto:" textFill="#837e7e">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="152.0" text="Prezzo unitario:" textFill="#837e7e">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="154.0" text="Quantità prodotto:" textFill="#837e7e">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="154.0" text="Categoria prodotto:" textFill="#837e7e">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="203.0" prefWidth="358.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="codiceProdottoText" promptText="Inserisci codice..." />
+                        <TextField fx:id="nomeProdottoText" promptText="Inserisci nome..." />
+                        <TextField fx:id="prezzoProdottoText" promptText="Inserisci prezzo..." />
+                        <TextField fx:id="quantitaProdottoText" promptText="Inserisci quantità..." />
+                        <TextField fx:id="categoriaProdottoText" promptText="Inserisci categoria..." />
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="145.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/productPaneIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="145.0" prefWidth="630.0">
+               <children>
+                  <VBox alignment="TOP_RIGHT" prefHeight="203.0" prefWidth="261.0">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="154.0" text="Nome fornitore:" textFill="#837e7e">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="154.0" text="Data carico:" textFill="#837e7e">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="154.0" text="Carica immagine:" textFill="#837e7e">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="147.0" prefWidth="358.0" spacing="5.0">
+                     <children>
+                        <ChoiceBox fx:id="fornitoriProdottoBox" prefHeight="25.0" prefWidth="359.0" />
+                        <DatePicker fx:id="dataCaricoProdotti" prefHeight="25.0" prefWidth="363.0" />
+                        <HBox prefHeight="32.0" prefWidth="358.0">
+                           <children>
+                              <TextField fx:id="caricaImmagineProdottotext" prefHeight="27.0" prefWidth="338.0" promptText="Inserisci URL..." />
+                              <Button id="loadImageProdottoButton" fx:id="caricaUrlProdottoButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#caricaUrlProdotto" prefHeight="25.0" prefWidth="29.0" text="..." textAlignment="CENTER" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="imageview" fitHeight="153.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/productPane2Icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Button id="loadProductButton" fx:id="caricaProdottoButton" mnemonicParsing="false" onAction="#caricaProdottoButton" prefHeight="42.0" prefWidth="105.0" text="Carica Prodotto">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <HBox layoutX="14.0" layoutY="169.0" prefHeight="58.0" prefWidth="772.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" />
+   </children>
+</AnchorPane>
